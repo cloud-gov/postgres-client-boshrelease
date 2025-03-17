@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+export PATH=/var/vcap/packages/postgres-client/bin:$PATH
+echo "PostgreSQL client is ready."

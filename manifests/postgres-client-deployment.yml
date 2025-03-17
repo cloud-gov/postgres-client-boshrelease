@@ -1,0 +1,25 @@
+instance_groups:
+- azs:
+  - z1
+  instances: 1
+  jobs:
+  - name: postgres-client
+    release: postgres-client
+  name: postgres-client
+  networks:
+  - name: default
+  stemcell: default
+  vm_type: t3.large
+name: postgres-client-deployment
+releases:
+- name: postgres-client
+  version: latest
+stemcells:
+- alias: default
+  os: ubuntu-jammy
+  version: latest
+update:
+  canaries: 1
+  canary_watch_time: 5000-60000
+  max_in_flight: 1
+  update_watch_time: 5000-60000

@@ -1,0 +1,7 @@
+---
+name: postgres-client
+packages:
+  - postgres-client
+templates:
+  bin/run: bin/run
+properties: {}
