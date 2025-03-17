@@ -166,7 +166,7 @@ manifest-*.yml
 /dev_releases/
 /.dev_builds/
 /blobs/
-/config/
+#/config/
 /private.yml
 *.tgz
 
