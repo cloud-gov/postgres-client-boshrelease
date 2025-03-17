@@ -7,12 +7,9 @@ set -u  # Treat unset variables as an error
 apt-get update
 apt-get install -y libssl-dev build-essential zlib1g-dev
 
-# Set PostgreSQL version
-VERSION=15.12
-
 # Extract and compile PostgreSQL client
-tar -zxf postgres-client/postgresql-${VERSION}.tar.gz
-cd postgresql-${VERSION}
+tar -zxf postgres-client/postgresql-*.tar.gz
+cd postgresql-*
 
 # Configure and build only the client
 ./configure --without-readline --without-zlib --prefix=${BOSH_INSTALL_TARGET} --with-openssl
@@ -21,4 +18,4 @@ make -C src/bin/psql install
 make -C src/include install
 make -C src/interfaces install
 
-echo "PostgreSQL ${VERSION} client installed."
+echo "PostgreSQL client installed."

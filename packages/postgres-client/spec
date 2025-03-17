@@ -4,4 +4,4 @@ name: postgres-client
 dependencies: []
 
 files:
-  - postgres-client/postgresql-15.12.tar.gz
+  - postgres-client/postgresql-*.tar.gz
